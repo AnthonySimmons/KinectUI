@@ -1,0 +1,29 @@
+﻿<Window x:Class="Kinect.UI.ViewerTool"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:kv="clr-namespace:Microsoft.Samples.Kinect.WpfViewers;assembly=Microsoft.Samples.Kinect.WpfViewers"
+        Title="ViewerTool" 
+        Height="213"
+        Width="284"
+        Opacity="0.5"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        ShowInTaskbar="False"
+        Topmost="True"
+        IsEnabled="False" SizeChanged="Window_SizeChanged">
+    <Grid x:Name="grid0" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Grid x:Name="grid1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="284" Height="213">
+            <kv:KinectDepthViewer x:Name="DepthViewer" KinectSensorManager="{Binding KinectSensorManager}" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Canvas>
+                <kv:KinectSkeletonViewer
+                                    KinectSensorManager="{Binding KinectSensorManager}"
+                                    Width="284"
+                                    Height="213"
+                                    ShowBones="True" 
+                                    ShowJoints="True" 
+                                    ShowCenter="True" 
+                                    ImageType="Depth" MouseRightButtonDown="KinectSkeletonViewer_MouseRightButtonDown" />
+            </Canvas>
+        </Grid>
+    </Grid>
+</Window>

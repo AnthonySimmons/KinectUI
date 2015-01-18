@@ -1,0 +1,54 @@
+﻿<Window x:Class="Kinect.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="358.955" Width="462.314" ShowInTaskbar="False" Closing="Window_Closing" Foreground="Black" Background="#7F52B0FF" WindowStyle="None" AllowsTransparency="True">
+    <Grid>
+        <TabControl x:Name="Tabs" HorizontalAlignment="Left" Height="229" Margin="66,62,0,0" VerticalAlignment="Top" Width="325" Background="#FF006621">
+            <TabItem x:Name="tabViewer" Header="Viewer">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="#FF63BB41" Margin="0,0,-10,-7">
+                    <Slider x:Name="sliderSize" HorizontalAlignment="Left" Margin="50,65,0,0" VerticalAlignment="Top" Height="16" Width="164" ValueChanged="sliderSize_ValueChanged"/>
+                    <Slider x:Name="sliderTransparency" HorizontalAlignment="Left" Margin="50,107,0,0" VerticalAlignment="Top" Height="17" Width="164" ValueChanged="sliderTransparency_ValueChanged"/>
+                    <Label x:Name="lblSize" Content="Window Size" HorizontalAlignment="Left" Margin="88,34,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblTransp" Content="Transparency" HorizontalAlignment="Left" Margin="88,86,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="btnDisable" Content="Disable Window" HorizontalAlignment="Left" Margin="88,144,0,0" VerticalAlignment="Top" Width="102" Height="23" Click="btnDisable_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabCursor" Header="Cursor">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="#FF63BB41">
+                    <Slider x:Name="sliderBoxSize" HorizontalAlignment="Left" Margin="58,45,0,0" VerticalAlignment="Top" Width="145" Maximum="100" Value="50" ValueChanged="sliderBoxSize_ValueChanged"/>
+                    <Label x:Name="lblBoxSize" Content="Cursor Box Size" HorizontalAlignment="Left" Margin="83,14,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rdoMinSmooth" Content="Minimal" HorizontalAlignment="Left" Margin="83,98,0,0" VerticalAlignment="Top" Checked="rdoMinSmooth_Checked"/>
+                    <RadioButton x:Name="rdoMedSmooth" Content="Medium" HorizontalAlignment="Left" Margin="83,118,0,0" VerticalAlignment="Top" Checked="rdoMedSmooth_Checked"/>
+                    <RadioButton x:Name="rdoMaxSmooth" Content="Maximal" HorizontalAlignment="Left" Margin="83,138,0,0" VerticalAlignment="Top" Checked="rdoMaxSmooth_Checked"/>
+                    <Label x:Name="lblSmoothing" Content="Cursor Smoothing" HorizontalAlignment="Left" Margin="69,72,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabGesture" Header="Gesture" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="55">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="#FF63BB41">
+                    <Button x:Name="btnDisableGestures" Content="Disable Gestures" HorizontalAlignment="Left" Margin="48,41,0,0" VerticalAlignment="Top" Width="109" Height="26" Click="btnDisableGestures_Click_1"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Margin="305,262,0,0" VerticalAlignment="Top" Width="75" Click="btnClose_Click"/>
+        <Label x:Name="lblTitle" Content="" HorizontalAlignment="Left" Margin="128,6,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+
+    </Grid>
+</Window>

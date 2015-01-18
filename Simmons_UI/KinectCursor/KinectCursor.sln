@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinectCursor", "KinectCursor\KinectCursor.csproj", "{F0746A20-3860-40AD-B873-8F91D6B42FCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0746A20-3860-40AD-B873-8F91D6B42FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0746A20-3860-40AD-B873-8F91D6B42FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0746A20-3860-40AD-B873-8F91D6B42FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0746A20-3860-40AD-B873-8F91D6B42FCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
